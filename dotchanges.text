@@ -1,9 +1,6 @@
 List of changes to the default tomcat configuration:
 
-    1. Modified /conf/server.xml
-        Commented the AJP connector
-        Modified the valve configuration
-    2. Added:
+    1. Added:
         /bin/dotStartup.sh
         /bin/dotStartup.bat
         /bin/dotShutdown.sh
@@ -12,7 +9,21 @@ List of changes to the default tomcat configuration:
         /bin/build.conf.bat
         .gitignore
         /lib/ContextPropertyDecoder.jar
-    3. Removed:
-        Content inside /webapps
-	4. Modified /conf/cataline.properties
+	/lib/jcifs.jar (current version 1.3.19)
+    
+    2. Removed:
+        Content inside /webapps		
+    
+
+    3. Modified: 	
+	/conf/server.xml
+        	Commented the AJP connector
+        	Modified the valve configuration
+		Added to the Connector URIEncoding="UTF-8"
+	
+	/conf/catalina.properties
 		Added org.apache.tomcat.util.digester.PROPERTY_SOURCE=com.dotcms.tomcat.context.TomcatPropertyDecoder
+
+	/bin/build.conf
+		Change #SERVER_FOLDER=dotserver/tomcat-{new version of tomcat}
+    
